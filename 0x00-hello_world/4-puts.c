@@ -6,10 +6,11 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(viod)
 {
-	char str1[] = "Programming is like building a multilingual puzzle";
+	char str1[] = "\"Programming is like building a multilingual puzzle";
+
 	puts(str1);
 
-	return 0;
+	return (0);
 }
