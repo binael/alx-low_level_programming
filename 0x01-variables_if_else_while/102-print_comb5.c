@@ -7,10 +7,7 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	int a, b, c, d;
 
 	for (a = 0; a < 10; ++a)
 	{
@@ -20,23 +17,16 @@ int main(void)
 			{
 				for (d = 0; d < 10; ++d)
 				{
-					if ((a == 0) && (b == 0) && (c == 0) && (d == 0))
+					if ((a == c) && (b >= d)) || (a > c)
 					{
 						continue;
 					}
 
-					if ((d >= b) && (c >= a))
-					{
-						putchar(a + '0');
-						putchar(b + '0');
-						putchar(32);
-						putchar(c + '0');
-						putchar(d + '0');
-					}
-					else
-					{
-						continue;
-					}
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(32);
+					putchar(c + '0');
+					putchar(d + '0');
 
 					if ((a == 9) && (b == 8) && (c == 9) && (d == 9))
 					{
@@ -51,6 +41,5 @@ int main(void)
 	}
 
 	putchar(10);
-
 	return (0);
 }
