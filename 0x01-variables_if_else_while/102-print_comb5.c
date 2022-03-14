@@ -18,9 +18,14 @@ int main(void)
 		{
 			for (c = 0; c < 10; ++c)
 			{
-				for (d = 1; d < 10; ++d)
+				for (d = 0; d < 10; ++d)
 				{
-					if ((d > b) && (c >= a))
+					if (a == b == c == d == 0)
+					{
+						continue;
+					}
+
+					if ((d >= b) && (c >= a))
 					{
 						putchar(a + '0');
 						putchar(b + '0');
