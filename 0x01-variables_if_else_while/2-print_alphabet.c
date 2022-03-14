@@ -10,14 +10,14 @@
 int main(void)
 {
 	int n;
+	int a = "/n";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	
 	for (n = 'a'; n = 'z'; n++)
-		putchar(n);
-		putchar('\n');
-		getch();
-
+	{	putchar(n);
+	}
+	putchar(a);
 	return (0);
 }
