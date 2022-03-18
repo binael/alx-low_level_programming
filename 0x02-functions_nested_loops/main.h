@@ -3,8 +3,6 @@
 
 #include <stdio.h>
 
-void _putchar(cha);
-
 void print_alphabet(void);
 
 #endif
