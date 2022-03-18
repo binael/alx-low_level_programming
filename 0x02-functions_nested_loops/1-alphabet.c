@@ -6,7 +6,6 @@
  * Return: 0 (Success)
  */
 
-void _putchar()
 void print_alphabet(void)
 
 int main(void)
@@ -22,8 +21,8 @@ void print_alphabet()
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		_putchar(i);
+		putchar(i);
 	}
 
-	_putchar(10)
+	putchar(10)
 }
