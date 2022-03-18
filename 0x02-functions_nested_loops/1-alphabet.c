@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - Program that prints putchar
+ * main - Entry point
  *
- * Return: 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 void print_alphabet(void)
@@ -12,8 +12,8 @@ void print_alphabet(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
 
-	putchar(10);
+	_putchar(10);
 }
