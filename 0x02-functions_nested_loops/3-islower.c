@@ -2,6 +2,7 @@
 
 /**
  * _islower - Entry point
+ * int c - lowercase or uppercase alphabets
  *
  * Return: Always 0 (Success)
  */
