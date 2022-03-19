@@ -2,7 +2,7 @@
 
 /**
  * _islower - Entry point
- * @c - lowercase or uppercase alphabets
+ * @c: lowercase or uppercase alphabets
  *
  * Return: Always 0 (Success)
  */
