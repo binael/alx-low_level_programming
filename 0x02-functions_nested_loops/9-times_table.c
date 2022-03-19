@@ -16,17 +16,20 @@ void times_table(void)
 			unit = k % 10;
 			tens = (k - (k % 10)) / 10;
 
-			if (k >= 10)
-				_putchar('0' + tens);
-			_putchar('0' + unit);
-
-			if (j < 9)
+			if (k == 0)
+			{
+				_putchar('0' + k);
+			}
+			else
 			{
 				_putchar(',');
 				_putchar(32);
 
 				if (k <= 9)
 					_putchar(32);
+				if (k >= 10)
+					_putchar('0' + tens);
+				_putchar('0' + unit);
 			}
 		}
 
