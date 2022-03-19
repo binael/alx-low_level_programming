@@ -16,7 +16,7 @@ void times_table(void)
 			unit = k % 10;
 			tens = (k - (k % 10)) / 10;
 
-			if (k == 0)
+			if (j == 0)
 			{
 				_putchar('0' + k);
 			}
