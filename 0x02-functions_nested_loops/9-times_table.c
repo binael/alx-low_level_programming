@@ -26,7 +26,7 @@ void times_table(void)
 				_putchar(32);
 
 				if (k <= 9)
-					putchar(32);
+					_putchar(32);
 			}
 		}
 
