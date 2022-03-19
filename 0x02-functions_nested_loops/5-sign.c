@@ -10,18 +10,18 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
+		printf("+\b");
 		return (1);
-		printf("+");
 	}
 	else if (n == 0)
 	{
+		printf("0\b");
 		return (0);
-		printf("0");
 	}
 	else if (n < 0)
 	{
+		printf("-\b");
 		return (-1);
-		printf("-");
 	}
 	return (0);
 }
