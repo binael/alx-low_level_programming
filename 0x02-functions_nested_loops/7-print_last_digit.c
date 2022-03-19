@@ -6,7 +6,13 @@
  *
  * Return: n (number)
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
+	int i;
+	if (n < 0)
+	{
+		i = n * -1;
+		return (i);
+	}
 	return (n % 10);
 }
