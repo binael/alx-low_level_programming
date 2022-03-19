@@ -14,10 +14,10 @@ void times_table(void)
 		{
 			k = i * j;
 			unit = k % 10;
-			ten = (k - (k % 10)) / 10;
+			tens = (k - (k % 10)) / 10;
 
 			if (k >= 10)
-				_putchar('0' + ten);
+				_putchar('0' + tens);
 			_putchar('0' + unit);
 
 			if (j < 9)
