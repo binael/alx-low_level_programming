@@ -24,7 +24,6 @@ void print_times_table(int n)
 				tens = tens % 10;
 				hundred = (k - (unit + tens * 10)) / 100;
 			}
-
 			if (j == 0)
 			{
 				_putchar('0' + k);
@@ -34,7 +33,7 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(32);
 
-				if (k <= 100)
+				if (k <= 99)
 					_putchar(32);
 				if (k <= 9)
 					_putchar(32);
@@ -45,7 +44,6 @@ void print_times_table(int n)
 				_putchar('0' + unit);
 			}
 		}
-
 		_putchar('\n');
 	}
 }
