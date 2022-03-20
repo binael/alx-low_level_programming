@@ -11,13 +11,17 @@ void print_times_table(int n)
 
 	for (i = 0; i <= n; i++)
 	{
+		if (n > 15)
+			break;
 		for (j = 0; j <= n; j++)
 		{
-			if (n > 15)
-				break;
 			k = i * j;
 			unit = k % 10;
 			tens = (k - unit) / 10;
+
+			if (tens > 9)
+			       tens = tens % 10;
+
 			hundred = (k - (unit + tens * 10)) / 100;
 
 			if (j == 0)
