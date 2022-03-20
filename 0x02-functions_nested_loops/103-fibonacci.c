@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	double a, b, sum, even_sum;
+	long int a, b, sum, even_sum;
 
 	a = 1;
 	b = 2;
@@ -20,11 +20,11 @@ int main(void)
 		a = b;
 		b = sum;
 
-		if ((sum % (double) 2) == (double) 0)
+		if ((sum % 2) == 0)
 			even_sum += sum;
 	}
 
-	printf("%.0f\n", even_sum);
+	printf("%ld\n", even_sum);
 
 	return (0);
 }
