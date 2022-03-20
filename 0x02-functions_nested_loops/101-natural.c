@@ -2,13 +2,15 @@
 
 /**
  * main - Function that computes the sum of the multiples of 5 and 5
+ *
+ * Return: Always 0 (success)
  */
-void main(void)
+int main(void)
 {
 	int i;
 	int sum;
 
-	sum = 0
+	sum = 0;
 
 	for (i = 1; i < 1024)
 	{
