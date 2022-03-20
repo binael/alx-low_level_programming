@@ -14,12 +14,12 @@ int main(void)
 	b = 2;
 	sum = 0;
 
-	printf("%lf, %lf", a, b);
+	printf("%.0f, %.0f", a, b);
 
 	for (n = 3; n <= 50; ++n)
 	{
 		sum = a + b;
-		printf(", %lf", sum);
+		printf(", %.0f", sum);
 		a = b;
 		b = sum;
 	}
