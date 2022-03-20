@@ -20,9 +20,10 @@ void print_times_table(int n)
 			tens = (k - unit) / 10;
 
 			if (tens > 9)
-			       tens = tens % 10;
-
-			hundred = (k - (unit + tens * 10)) / 100;
+			{
+				tens = tens % 10;
+				hundred = (k - (unit + tens * 10)) / 100;
+			}
 
 			if (j == 0)
 			{
@@ -32,8 +33,9 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(32);
-				_putchar(32);
 
+				if (k <= 100)
+					_putchar(32);
 				if (k <= 9)
 					_putchar(32);
 				if (k >= 100)
