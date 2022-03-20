@@ -20,7 +20,7 @@ int main(void)
 		a = b;
 		b = sum;
 
-		if ((sum % 2) == 0)
+		if ((sum % (double) 2) == (double) 0)
 			even_sum += sum;
 	}
 
