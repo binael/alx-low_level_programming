@@ -7,18 +7,19 @@
  */
 int main(void)
 {
-	int a, b, n, sum;
+	int n;
+	double a, b, sum;
 
 	a = 1;
 	b = 2;
 	sum = 0;
 
-	printf("%d, %d", a, b);
+	printf("%lf, %lf", a, b);
 
 	for (n = 3; n <= 50; ++n)
 	{
 		sum = a + b;
-		printf(", %d", sum);
+		printf(", %lf", sum);
 		a = b;
 		b = sum;
 	}
