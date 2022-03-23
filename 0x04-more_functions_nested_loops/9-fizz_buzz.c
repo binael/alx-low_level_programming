@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints fizz for 3, buzz for 5 and fizzbuzz for 15
@@ -10,7 +10,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 1, j <= 100; j++)
+	for (i = 1, i <= 100; i++)
 	{
 		if ((i % 15) == 0)
 			printf("FizzBuzz");
