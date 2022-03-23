@@ -20,6 +20,6 @@ void more_numbers(void)
 			_putchar('0' + unit);
 		}
 
-		putchar('\n');
+		_putchar('\n');
 	}
 }
