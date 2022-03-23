@@ -3,6 +3,8 @@
 /**
  * print_diagonal - prints a diagonal as per number input
  * @n: number showing length of the diagonal
+ * 
+ * Return: void
  */
 
 void print_diagonal(int n)
