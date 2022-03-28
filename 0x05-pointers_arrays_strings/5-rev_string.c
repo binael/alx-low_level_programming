@@ -10,6 +10,7 @@
 void rev_string(char *s)
 {
 	int c1;
+	char temp;
 
 	int lenght = 0;
 	int boolean = 1;
@@ -24,14 +25,10 @@ void rev_string(char *s)
 		lenght += 1;
 	}
 
-	char temp[lenght];
-
-	for (c1 = 0; c1 < lenght; ++c1)
+	for (c1 = 0; c1 < lenght / 2; c1++)
 	{
-		temp[lenght - 1 - c1] = *(s + c1);
+		temp = *(s + c1);
+		*(s + c1) = *(s + lenght - c1 - 1);
+		*(s + lenght - c1 - 1) = temp;
 	}
-
-	*s = *temp;
-
-	_putchar('\n');
 }
