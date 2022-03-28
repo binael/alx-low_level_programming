@@ -18,11 +18,13 @@ void print_rev(char *s)
 		length += 1;
 	}
 
-	l = length;
+	l = 0;
 
-	while ((s + l) >= s)
+	while (l <= length)
 	{
-		_putchar(*(s + l));
-		l -= 1;
+		_putchar(*(s - l));
+		l += 1;
 	}
+
+	_putchar('\n');
 }
