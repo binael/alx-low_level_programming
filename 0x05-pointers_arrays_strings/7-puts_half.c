@@ -9,20 +9,22 @@
 
 void puts_half(char *str)
 {
-	int i, j;
+	int i, j, k;
 
 	i = 0;
 
 	while (*(str + i) != '\0')
 		i += 1;
 
-	if (((i - 1) % 2) != 0)
-	{
-		for (j = i / 2; j < i; j++)
-		{
-			_putchar(*(str + j));
-		}
+	if ((i % 2) == 0)
+		j = i / 2;
+	else
+		j = (i - 1) / 2;
 
-		_putchar('\n');
+	for (k = j; k < i; k++)
+	{
+		_putchar(*(str + k));
 	}
+
+	_putchar('\n');
 }
