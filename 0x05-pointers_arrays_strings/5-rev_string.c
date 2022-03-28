@@ -9,7 +9,8 @@
 
 void rev_string(char *s)
 {
-	int c1, c2;
+	int c1;
+	char *temp;
 
 	int lenght = 0;
 	int boolean = 1;
@@ -26,17 +27,10 @@ void rev_string(char *s)
 
 	for (c1 = 0; c1 < lenght; ++c1)
 	{
-		if (c1 >= lenght)
-			break;
-		_putchar(*(s + c1));
+		*(temp + lenght - 1 - c1) = *(s + c1);
 	}
 
-	_putchar('\n');
-
-	for (c2 = (lenght - 1); c2 >= 0; --c2)
-	{
-		_putchar(*(s + c2));
-	}
+	*s = *temp;
 
 	_putchar('\n');
 }
