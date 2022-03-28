@@ -26,6 +26,8 @@ void rev_string(char *s)
 
 	for (c1 = 0; c1 < lenght; ++c1)
 	{
+		if (c1 >= lenght)
+			break;
 		_putchar(*(s + c1));
 	}
 
