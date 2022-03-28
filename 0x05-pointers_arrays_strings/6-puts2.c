@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h";
 
 /**
  * puts2 - prints every second character, and starts with first
@@ -13,8 +13,10 @@ void puts2(char *str)
 
 	while (*(str + i) != '\0')
 	{
-		_putchar(*(str + i));
-		 i = i + 2;
+		if ((i % 2 == 0))
+			_putchar(*(str + i));
+
+		i += 1
 	}
 
 	_putchar('\n');
