@@ -18,7 +18,7 @@ void rev_string(char *s)
 	{
 		if (*(s + lenght) == '\0')
 		{
-			boolean = 0;
+			break;
 		}
 
 		lenght += 1;
