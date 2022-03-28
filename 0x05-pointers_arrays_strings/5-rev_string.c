@@ -10,7 +10,6 @@
 void rev_string(char *s)
 {
 	int c1;
-	char *temp;
 
 	int lenght = 0;
 	int boolean = 1;
@@ -24,6 +23,8 @@ void rev_string(char *s)
 
 		lenght += 1;
 	}
+
+	char *temp[lenght];
 
 	for (c1 = 0; c1 < lenght; ++c1)
 	{
