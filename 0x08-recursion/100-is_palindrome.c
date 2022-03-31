@@ -10,7 +10,7 @@
  */
 int comp_string(int len, int size, char *s)
 {
-	if (*s == *(s(size / 2)))
+	if (*s == *(s + (size / 2)))
 		return (1);
 	if (*s != *(s + len))
 		return (0);
@@ -27,7 +27,7 @@ int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + _strlen_recursion);
+	return (1 + _strlen_recursion(s));
 }
 
 /**
@@ -40,7 +40,7 @@ int is_palindrome(char *s)
 {
 	int size;
 
-	int len = _strlen_recursion(s)
+	int len = _strlen_recursion(s);
 
 	if ((len == 0) || (len == 1))
 		return (1);
