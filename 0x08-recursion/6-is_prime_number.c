@@ -10,10 +10,10 @@
 
 int check_prime(int odd, int num)
 {
-	if ((num % odd) == 0)
-		return (0);
-	else if (odd >= num)
+	if (odd >= num)
 		return (1);
+	else if ((num % odd) == 0)
+		return (0);
 
 	return (check_prime(odd + 2, num));
 }
