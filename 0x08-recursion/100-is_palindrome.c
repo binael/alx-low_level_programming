@@ -12,8 +12,8 @@ int comp_string(int len, int size, char *s)
 {
 	if (*s != *(s + len))
 		return (0);
-	 if (*s == *(s + (size / 2)))
-		 return (1);
+	if (*s == *(s + (size / 2)))
+		return (1);
 	return (comp_string(len - 2, size, s + 1));
 }
 
