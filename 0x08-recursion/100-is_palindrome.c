@@ -46,6 +46,6 @@ int is_palindrome(char *s)
 		return (1);
 
 	size = len;
-	len = len - 1;
+	len = len;
 	return (comp_string(len, size, s));
 }
