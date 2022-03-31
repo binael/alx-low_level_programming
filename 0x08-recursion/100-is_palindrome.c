@@ -2,26 +2,32 @@
 
 /**
  * comp_string - function that compares string
- * @i: integer start of string
  * @len: integer end of string
  * @size: length of string
  * @s: string
  *
  * Return: 1 (if true), 0 (if false)
  */
-int comp_string(int i, int len, int size, char *s)
+int comp_string(int len, int size, char *s)
 {
-	if (s[i] == s[size / 2])
-	{
-		if ((size % 2 == 0) && (s[i] != s[len]))
-			return (0);
-
+	if (*s == *(s(size / 2)))
 		return (1);
-	}
-	if (s[i] != s[len])
+	if (*s != *(s + len))
 		return (0);
+	return (comp_string(len - 2, size, s + 1));
+}
 
-	return (comp_string(i + 1, len - 1, size, s));
+/**
+ * _strlen_recursion - length of string
+ * @s: string
+ *
+ * Return: length
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion);
 }
 
 /**
@@ -34,16 +40,12 @@ int is_palindrome(char *s)
 {
 	int size;
 
-	int len = 0;
-	int i = 0;
-
-	while (*(s + len) != '\0')
-		len += 1;
+	int len = _strlen_recursion(s)
 
 	if ((len == 0) || (len == 1))
 		return (1);
 
 	size = len;
 	len = len - 1;
-	return (comp_string(i, len, size, s));
+	return (comp_string(len, size, s));
 }
