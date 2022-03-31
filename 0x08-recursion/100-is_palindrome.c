@@ -10,7 +10,7 @@
  */
 int comp_string(int len, int size, char *s)
 {
-	if (*s == *(s + (size / 2)))
+	if (*s == *(s + size))
 		return (1);
 	if (*s != *(s + len))
 		return (0);
@@ -45,7 +45,7 @@ int is_palindrome(char *s)
 	if (len <= 1)
 		return (1);
 
-	size = len;
+	size = len / 2;
 	len = len - 1;
 	return (comp_string(len, size, s));
 }
