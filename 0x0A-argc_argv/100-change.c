@@ -10,7 +10,7 @@
  * Return: 1 (failure), 0 (success)
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i, remain;
 
@@ -29,7 +29,7 @@ int main (int argc, char *argv[])
 		return (0);
 	}
 
-	remain = atoi (argv[1]);
+	remain = atoi(argv[1]);
 
 	for (i = 0; i < 5; i++)
 	{
