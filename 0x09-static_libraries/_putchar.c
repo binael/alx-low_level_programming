@@ -12,5 +12,5 @@ int _putchar(char c)
 {
 	putchar(c);
 
-	retun (0);
+	return (0);
 }
