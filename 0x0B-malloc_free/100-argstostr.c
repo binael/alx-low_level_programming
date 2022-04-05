@@ -36,5 +36,5 @@ char *argstostr(int ac, char **av)
 		strcat(new_string, av[i]);
 	}
 
-	return (new_string)
+	return (new_string);
 }
