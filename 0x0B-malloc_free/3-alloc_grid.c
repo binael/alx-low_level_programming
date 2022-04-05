@@ -7,20 +7,19 @@
  * @width: integer width of the array
  * @height: integer height of the array
  *
- * Return: array 
+ * Return: array
  */
 
 int **alloc_grid(int width, int height)
 {
-	int **array;
 	int i, j;
 
 	if ((width <= 0) || (height <= 0))
 		return (NULL);
-	
+
 	for (i = 0; i < height; i++)
 	{
-		array[i] = malloc(width * sizeof(int));
+		int *array[i] = (int *)malloc(width * sizeof(int));
 		if (array[i] == NULL)
 			return (NULL);
 	}
