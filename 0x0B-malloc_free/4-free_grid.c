@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * free_grid - free an array of array
- * @grid - the array of array
+ * @grid: the array of array
  * @height: the number of array rows
  *
  * Return: void
