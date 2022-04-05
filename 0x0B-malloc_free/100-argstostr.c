@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 
 	strcpy(new_string, av[0]);
 
-	for (i = 1: i < ac; i++)
+	for (i = 1; i < ac; i++)
 	{
 		strcat(new_string, "\n");
 		strcat(new_string, av[i]);
