@@ -14,7 +14,7 @@ char **strtow(char *str)
 
 	int i = 0, row = 0, col = 0, len1 = 0;
 
-	if ((str == NULL) || (str == '\0'))
+	if ((str == NULL) || (*str == '\0'))
 		return (NULL);
 
 	word = malloc(sizeof(char *) * 3);
@@ -42,7 +42,7 @@ char **strtow(char *str)
 			continue;
 		}
 
-		word[col][row] = *(s + i);
+		word[col][row] = *(str + i);
 		i += 1;
 		row += 1;
 	}
