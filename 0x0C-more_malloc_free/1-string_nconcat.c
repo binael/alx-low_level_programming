@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: seconc string
@@ -16,12 +16,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		s1 = "";
-	if (s2  == NULL)
+	if (s2 == NULL)
 		s2 = "";
 
 	for (x = 0; s1[x]; x++)
 		continue;
-	for (y = 0; s2[2]; y++)
+	for (y = 0; s2[y]; y++)
 		continue;
 
 	if (n > y)
