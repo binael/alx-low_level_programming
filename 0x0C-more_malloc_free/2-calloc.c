@@ -16,10 +16,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	cal = malloc(nmemb * size);
-	if (call == NULL)
+	if (cal == NULL)
 		return (NULL);
 
 	memset(cal, 0, (nmemb * size));
 
-	return (call);
+	return (cal);
 }
