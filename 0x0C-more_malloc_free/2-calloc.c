@@ -20,8 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (call == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
-		cal[i] = 0;
+	memset(cal, 0, (nmemb * size));
 
 	return (call);
 }
