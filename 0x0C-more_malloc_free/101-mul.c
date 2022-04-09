@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		if (argv[1][i] < '0' || argv[1][i] > '9')
 		{
 			printf("Error\n");
-			exit (98);
+			exit(98);
 		}
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	mul = atoi(argv[1]) * atoi(argv[2]);
+	mul = atol(argv[1]) * atol(argv[2]);
 
 	printf("%lu\n", mul);
 
