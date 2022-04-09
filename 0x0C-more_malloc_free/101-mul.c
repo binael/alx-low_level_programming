@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 	for (j = 0; argv[2][j] != '\0'; j++)
 	{
-		if (argv[2][i] < '0' || argv[2][i] > '9')
+		if (argv[2][j] < '0' || argv[2][j] > '9')
 		{
 			printf("Error\n");
 			exit(98);
