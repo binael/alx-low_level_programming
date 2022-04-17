@@ -2,7 +2,7 @@
 
 /**
  * rot13 - converts to rot13
- * @s - string input
+ * @s: string input
  *
  * Return: string
  */
