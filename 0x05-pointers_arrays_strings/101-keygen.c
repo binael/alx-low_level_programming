@@ -1,21 +1,31 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 /**
- * main - keygen for crackme
+ * main - generates keygen
  *
- * Return: void
+ * Return: 0
  */
 
 int main(void)
 {
-	int num;
+	int a = 0, b = 0;
+	time_t t;
 
-	srand(time(0));
-	num = rand();
-	printf("%i\n", num);
+	srand((unsigned int) time(&t));
+
+	while (b < 2772)
+	{
+		a = rand() % 128;
+		if ((a + b) > 2772)
+			break;
+
+		b = b + a;
+		printf("%c", a);
+	}
+	printf("%c\n", (2772 - b));
 
 	return (0);
 }
