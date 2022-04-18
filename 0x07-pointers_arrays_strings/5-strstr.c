@@ -1,34 +1,38 @@
 #include "main.h"
 
 /**
- * _strstr - get the first occurence of needle in haystack
- * @haystack: the base string
- * @needle: substring to the searched for
+ * _strstr - Locates a substring.
+ * @haystack: The string to be searched.
+ * @needle: The substring to be located.
  *
- * Return: NULL or the string continuation
+ * Return: If the substring is located - a pointer to the beginning
+ *                                       of the located substring.
+ *         If the substring is not located - NULL.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int index;
 
 	if (*needle == 0)
 		return (haystack);
 
 	while (*haystack)
 	{
-		i = 0;
+		index = 0;
 
-		if (haystack[i] == needle[i])
+		if (haystack[index] == needle[index])
 		{
-			do{
-				if (needle[i + 1] == '\0')
+			do {
+				if (needle[index + 1] == '\0')
 					return (haystack);
-				i++;
-			} while (haystack[i] == needle[i]);
+
+				index++;
+
+			} while (haystack[index] == needle[index]);
 		}
 
-		haystack++
+		haystack++;
 	}
 
 	return ('\0');
