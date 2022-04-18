@@ -8,7 +8,7 @@
  * Return: NULL if no match and string if matched
  */
 
-char *_strpbrk(*char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i;
 
