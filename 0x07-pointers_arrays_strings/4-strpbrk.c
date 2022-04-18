@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strpbk - searches for any character match in a string
+ * _strpbrk - searches for any character match in a string
  * @s: given string
  * @accept: the string to check for its letter match
  *
