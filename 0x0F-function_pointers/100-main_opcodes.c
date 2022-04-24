@@ -12,12 +12,12 @@
 int main(int argc, char **argv)
 {
 	int num, i;
-	char *m;
+	unsigned char *m;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit (1);
+		exit(1);
 	}
 
 	num = atoi(argv[1]);
@@ -25,10 +25,10 @@ int main(int argc, char **argv)
 	if (argv < 0)
 	{
 		printf("Error\n");
-		exit (2);
+		exit(2);
 	}
 
-	m = (char *)main;
+	m = (unsigned char *)main;
 
 	printf("%02x", m[0]);
 
