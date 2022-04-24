@@ -30,13 +30,12 @@ int main(int argc, char *argv[])
 
 	m = (unsigned char *)main;
 
-	printf("%02x", m[0]);
-
-	for (i = 1; i < num; i++)
+	for (i = 0; i < (num - 1); i++)
 	{
-		printf(" %02x", m[i]);
+		printf("%02x ", m[i]);
 	}
 
+	printf("%02x", m[i]);
 	printf("\n");
 
 	return (0);
