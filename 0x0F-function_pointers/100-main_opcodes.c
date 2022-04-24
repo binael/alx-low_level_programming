@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	printf("%02x", m[0]);
 
-	for (i = 1; i < argc; i++)
+	for (i = 1; i < num; i++)
 	{
 		printf(" %02x", m[i]);
 	}
