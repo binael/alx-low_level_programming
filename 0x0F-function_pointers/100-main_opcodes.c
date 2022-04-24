@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {
-	int num;
+	int num, i;
 	char *m;
 
 	if (argc != 2)
