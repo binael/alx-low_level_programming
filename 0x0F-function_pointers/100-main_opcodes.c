@@ -9,7 +9,7 @@
  * Return: exit status
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int num, i;
 	unsigned char *m;
