@@ -6,7 +6,6 @@
  *
  * Return: void
  */
-
 void print_all(const char * const format, ...)
 {
 	va_list ap;
@@ -31,9 +30,11 @@ void print_all(const char * const format, ...)
 			case 's':
 				s = va_arg(ap, char *);
 				if (s == NULL)
+				{
 					printf("%p", s);
-				else
-					printf("%s", s);
+					break;
+				}
+				printf("%s", s);
 				break;
 			default:
 				b = 0;
