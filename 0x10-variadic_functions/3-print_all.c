@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	char *s;
-	int i = 0, b = 1;
+	int i = 0;
 
 	va_start(ap, format);
 
@@ -37,12 +37,12 @@ void print_all(const char * const format, ...)
 				printf("%p", s);
 				break;
 			default:
-				b = 0;
+				i++;
+				continue;
 		}
-		if (*(format + i + 1) && b)
+		if (*(format + i + 1))
 			printf(", ");
 
-		b = 1;
 		i++;
 	}
 	printf("\n");
