@@ -5,7 +5,7 @@
  * @head: doubly linked list head
  * @index: integer index number
  *
- * Return: 
+ * Return: node having the given index
  */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
