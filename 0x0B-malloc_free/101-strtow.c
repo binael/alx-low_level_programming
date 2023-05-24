@@ -9,46 +9,84 @@
 
 char **strtow(char *str)
 {
-	char **word;
-	int len;
+	char **words;
 
-	int i = 0, row = 0, col = 0, len1 = 0;
-
-	if ((str == NULL) || (*str == '\0'))
+	if (str == NULL)
 		return (NULL);
 
-	word = malloc(sizeof(char *) * 3);
-	if (word == NULL)
+	words = malloc(sizeof(char *) * SIZE);
+	if (words == NULL)
 		return (NULL);
 
-	while (*(str + len1) != ' ')
-		len1 += 1;
+	if (split_string(words, str))
+		return (words);
 
-	len = strlen(str);
-	word[0] = malloc((len1 + 2) * sizeof(char));
-	word[1] = malloc((len - len1 + 1) * sizeof(char));
-	word[2] = malloc(1 * sizeof(char));
+	return (NULL);
+}
 
-	if ((word[0] == NULL) || (word[1] == NULL) || (word[2] == NULL))
-		return (NULL);
 
-	while (*(str + i) != '\0')
+/**
+ * split_string - splits the value of a string and store in arraay
+ * @word: the array with the split words of string
+ * @str: the string to split
+ *
+ * Return: 1 on success, 0 on failure
+*/
+int split_string(char **word, char *str)
+{
+	int state = 0, i = 0, j = 0;
+
+	word[i] = malloc(sizeof(char) * SIZE);
+	if (word[i] == NULL)
+		return (0);
+
+	while (*str != '\0')
 	{
-		if (*(str + i) == ' ')
+		if (state == 1 && *str == ' ')
 		{
-			word[col][row] = '\0';
-			col = 1;
-			row = 0;
-			continue;
+			word[i][j] = '\0';
+			i++;
+			j = 0;
+			state = 0;
+			word[i] = malloc(sizeof(char) * SIZE);
+			if (word[i] == NULL)
+			{
+				free_2d(word, i - 1);
+				return (0);
+			}
 		}
-
-		word[col][row] = *(str + i);
-		i += 1;
-		row += 1;
+		else if (*str != ' ')
+		{
+			word[i][j++] = *str;
+			state = 1;
+		}
+		str++;
 	}
+	if (state == 0)
+		word[i] = NULL;
+	else
+	{
+		word[i][j] = '\0';
+		word[i + 1] = NULL;
+	}
+	return (1);
+}
 
-	word[col][row] = '\0';
-	word[2][0] = '\0';
 
-	return (word);
+/**
+ * free_2d - frees the memory of a two dimensional array
+ * @array: the array of strings
+ * @size: the size of the array
+ *
+ * Return: void
+*/
+void free_2d(char **array, int size)
+{
+	int i;
+
+	for (i = 0; i < size; i++)
+	{
+		free(array[i]);
+	}
+	free(array);
 }
