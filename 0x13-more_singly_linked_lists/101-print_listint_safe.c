@@ -29,13 +29,13 @@ size_t print_listint_safe(const listint_t *head)
 		}
 
 		size++;
-		printf("[%p] %i\n", (void *)head, head->n);
+		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
 
 	if (node != NULL)
 	{
-		printf("-> [%p] %i\n", (void *)node, node->n);
+		printf("-> [%-p] %d\n", (void *)head, head->n);
 	}
 	return (size);
 }
