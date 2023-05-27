@@ -43,7 +43,8 @@ listint_t *find_listint_loop(listint_t *head)
 
 		if (tortoise == hare)
 		{
-			return (tortoise);
+			break;
 		}
 	}
+	return (tortoise);
 }
