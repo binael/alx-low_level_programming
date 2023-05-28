@@ -8,84 +8,44 @@
 */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t size, isLoop = 0;
-	const listint_t *node;
+	size_t size = 0, end = 0;
+	const listint_t *fast, *slow;
 
 	if (head == NULL)
-		exit(98);
+		return (size);
 
-	node = node_with_loop(head);
-
-	while (head != NULL)
+	fast = slow = head;
+	while (fast != NULL && fast->next != NULL && end == 0)
 	{
-		if (isLoop == 1 && (head == node))
-		{
-			break;
-		}
-
-		if (isLoop == 0 && (head == node))
-		{
-			isLoop = 1;
-		}
-
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		slow = slow->next;
+		fast = fast->next->next;
 		size++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-	}
 
-	if (node != NULL)
+		if (fast == slow)
+		{
+			end = 1;
+			if (slow == head)
+				break;
+
+			slow = head;
+			while (slow != fast)
+			{
+				printf("[%p] %d\n", (void *)fast, fast->n);
+				fast = fast->next;
+				slow = slow->next;
+				size++;
+			}
+		}
+	}
+	if (fast == slow)
+		printf("-> [%-p] %d\n", (void *)fast, fast->n);
+
+	while ((fast != slow) && (slow != NULL))
 	{
-		printf("-> [%-p] %d\n", (void *)head, head->n);
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		size++;
+		slow = slow->next;
 	}
 	return (size);
-}
-
-
-/**
- * node_with_loop - gets the node that has the loop
- * @head: the head of the singly linked list
- *
- * Return: the node with the loop
-*/
-const listint_t *node_with_loop(const listint_t *head)
-{
-	const listint_t *tortoise, *hare;
-
-	if (head == NULL)
-	{
-		return (NULL);
-	}
-
-	tortoise = head;
-	hare = head;
-
-	while ((hare != NULL) && (hare->next != NULL))
-	{
-		tortoise = tortoise->next;
-		hare = hare->next->next;
-
-		if (tortoise == hare)
-		{
-			break;
-		}
-	}
-
-	if (hare == NULL)
-	{
-		return (NULL);
-	}
-
-	tortoise = head;
-
-	while (tortoise != hare)
-	{
-		tortoise = tortoise->next;
-		hare = hare->next;
-
-		if (tortoise == hare)
-		{
-			break;
-		}
-	}
-	return (tortoise);
 }
