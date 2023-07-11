@@ -22,11 +22,11 @@ int jump_search(int *array, size_t size, int value)
 
 	while (max < size)
 	{
-		printf("Value checked array[%ld] = [%d]\n", max, array[max]);
 		if (array[max] >= value)
 		{
 			break;
 		}
+		printf("Value checked array[%ld] = [%d]\n", max, array[max]);
 		max = max + root;
 	}
 	min = max - root;
