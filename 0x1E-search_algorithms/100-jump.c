@@ -15,10 +15,10 @@ int jump_search(int *array, size_t size, int value)
 	if (array == NULL || size < 1)
 		return (-1);
 
-	root =  (size_t)sqrt(size);
+	root = (size_t)sqrt((double)size);
 	max = min = 0;
 
-	while (root)
+	while (max < size)
 	{
 		printf("Value checked array[%ld] = [%d]\n", max, array[max]);
 		if (array[max] >= value || max >= size)
@@ -27,14 +27,12 @@ int jump_search(int *array, size_t size, int value)
 				return (-1);
 			else if (max == 0)
 				return (max);
-
-			min = max - root;
-			printf("Value found between indexes [%ld] and [%ld]\n", min, max);
 			break;
 		}
 		max = max + root;
 	}
 	min = max - root;
+	printf("Value found between indexes [%ld] and [%ld]\n", min, max);
 
 	if (max >= size)
 		max = size - 1;
