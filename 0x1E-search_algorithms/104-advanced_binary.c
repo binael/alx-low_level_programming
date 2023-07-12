@@ -68,6 +68,10 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 	}
 	else
 	{
+		if (mid == 0)
+		{
+			return (-1);
+		}
 		result = rec_binary(array, low, mid - 1, value);
 	}
 
