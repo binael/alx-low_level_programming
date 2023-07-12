@@ -56,7 +56,7 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 
 	if (array[mid] == value)
 	{
-		if (array[mid - 1] != value)
+		if (mid >= 1 && array[mid - 1] != value)
 		{
 			return (mid);
 		}
