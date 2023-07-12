@@ -38,7 +38,7 @@ int advanced_binary(int *array, size_t size, int value)
 */
 int rec_binary(int *array, size_t low, size_t high, int value)
 {
-	int result = 0;
+	int result;
 	size_t mid;
 
 	if (array == NULL)
@@ -56,7 +56,7 @@ int rec_binary(int *array, size_t low, size_t high, int value)
 
 	if (array[mid] == value)
 	{
-		if (mid >= 1 && array[mid - 1] != value)
+		if ((mid == low) && (array[mid - 1] != value))
 		{
 			return (mid);
 		}
